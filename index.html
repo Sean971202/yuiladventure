@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玉里奇遇 - 專題介紹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <h2>玉里奇遇</h2>
+        <ul>
+            <li><a href="#about">關於我們</a></li>
+            <li><a href="#story">創作故事</a></li>
+            <li><a href="#contact">聯絡與回饋</a></li>
+        </ul>
+    </nav>
+
+    <main class="content-area">
+        <section id="about" class="page active">
+            <div class="glass-container">
+                <h1>關於我們</h1>
+                <p>我們是一群在花蓮玉里高中資料處理科的學生。這裡不只是我們的家鄉，更是一座等待被重新定義的數位寶藏。</p>
+                <p>「玉里奇遇」專題的初衷，是希望能打破傳統文化紀錄的隔閡。我們透過程式架構，試圖將玉里鎮上的歷史脈絡、在地人文與景點故事，轉化為一場觸手可及的數位冒險。</p>
+                <p>這不僅是一個專題，更是我們獻給家鄉的一封數位情書。我們相信，科技的價值，在於讓被遺忘的歷史與美好角落，重新在旅人的螢幕上閃閃發光。</p>
+            </div>
+        </section>
+
+        <section id="story" class="page">
+            <div class="glass-container">
+                <h2>創作故事</h2>
+                <p>這場旅程從零開始。當我們在開發初期，面對的是無數的程式邏輯難題，以及如何將厚重的歷史文化轉化為生動的互動遊戲。</p>
+                <p>我們將編碼視為畫筆，以 Python 與 Java 構築出遊戲的核心架構，確保每一個景點的數據能精準對應到互動環節；我們將攝影視為載體，帶著 Sony a6600 走遍玉里的每一條街道，捕捉客城紅橋下那道劃過金黃稻浪的列車身影。</p>
+                <p>從最初的一張草稿圖，到現在這個能夠與使用者互動的系統，過程充滿了實驗與修正。我們在程式碼的括號間磨練邏輯，在影像的快門聲中深化對家鄉的情感。這段經歷教會我們，技術不只是冷冰冰的數據，當它與土地連結時，便擁有改變觀點的力量。</p>
+            </div>
+        </section>
+
+        <section id="contact" class="page">
+            <div class="glass-container">
+                <h2>聯絡與開發回饋</h2>
+                <p>你的每一個意見，都是讓「玉里奇遇」成長的養分。我們誠摯邀請你參與開發測試，協助我們改善互動體驗，讓這份作品能更貼近每一位旅人的需求。</p>
+                <div class="btn-group">
+                    <a href="https://forms.gle/pE4BPKwPYEAAxMCr7" target="_blank" class="cta-link">填寫開發回饋問卷</a>
+                    <a href="https://www.instagram.com/yuli.adventure?igsh=MTV5bmp3NjBzdWQ3OQ%3D%3D" target="_blank" class="ig-link">追蹤 Instagram 看我們一步一步建造遊戲</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('.sidebar a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                document.querySelector(link.getAttribute('href')).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
